@@ -6,7 +6,6 @@ VALID_CERTIFICATE = False
 
 def boardSize (): #ask user input for board size
 
-    global N
 
     while True: #keep asking until getting a valid result
         try:
@@ -21,7 +20,6 @@ def boardSize (): #ask user input for board size
 
 def queenLocation ():
 
-    global QUEENS_LIST
 
     for column in range (N):
         check = False
@@ -43,9 +41,7 @@ def twoQueensAttack (queenOne, queenTwo):
 
 
 def checkQueenList ():
-    global N
-    global QUEENS_LIST
-    global VALID_CERTIFICATE
+
 
     for i in range (N):
         for j in range (N):
@@ -59,7 +55,7 @@ def checkQueenList ():
 
 
 def printCertificate ():
-    global VALID_CERTIFICATE
+
 
     if VALID_CERTIFICATE:
         print('\nA valid solution of the N-Queens problem, with N of', N)
